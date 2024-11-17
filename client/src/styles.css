@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+ 
+
+    line-height: 1.3em;
+
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+  background: url('https://source.unsplash.com/1600x900/?nature,landscape') no-repeat center center fixed;
+  background-size: cover;
+  flex-direction: column;
+  box-shadow: inset 0 0 50px rgba(255, 0, 0, 0.6),
+    inset 0 0 100px rgba(0, 255, 0, 0.2),
+    inset 0 0 150px rgba(0, 0, 255, 0.4),
+    inset 0 0 200px rgba(255, 255, 0, 0.9);
+  /* Colorful shadow effect */
+}
+
+/* To-Do List Container */
+.todo-container {
+  width: 800px;
+  /* Adjusted for wider container */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #0f0000;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+/* Input Container (Unchanged) */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 12px;
+  width: 48%;
+  margin: 0 1%;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color:white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  border: 2px solid #4c9bff;
+  background-color: #fff;
+}
+
+/* Add Button (Unchanged) */
+.add-todo-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.add-todo-button {
+  padding: 12px 20px;
+  background-color: #78eba0;
+  padding-left: 120px;
+  margin-bottom: 20px;
+  padding-right: 120px;
+  color: #010000;
+  border: 2px solid #171717;
+  /* Adding a white border */
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Adding a soft shadow around the button */
+}
+
+.add-todo-button:hover {
+  background-color: #e3ed7b;
+  color: black;
+  transform: scale(1.05);
+  /* Slightly enlarges the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* A stronger shadow on hover for a glowing effect */
+}
+
+/* Todo Items Two-Column Layout */
+.todo-list {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two equal columns */
+  gap: 40px;
+  /* Space between items */
+  width: 100%;
+}
+
+/* Individual Todo Items */
+.todo-item {
+
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+  justify-content: center;
+  /* Center content vertically */
+  background: white;
+  /* Remove the background color */
+  padding: 15px;
+  border: 2px solid #250101;
+  /* Add a solid border with the color you prefer */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 8px rgba(0.2, 0, 0.2, 1);
+  /* Inner shadow */
+  text-align: center;
+  /* Center text inside the todo-item */
+
+}
+
+.todo-item:hover {
+  transform: scale(1.05);
+  /* Slight enlargement effect */
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
+  /* Darker inner shadow on hover */
+}
+
+.todo-item h3,
+.todo-item p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  /* Remove default margin */
+}
+
+.todo-item h3 {
+  font-weight: bold;
+}
+
+.todo-item p {
+  margin-top: 5px;
+  /* Add a small space between title and description */
+}
+
+
+.todo-item h3 {
+  font-weight: bolder;
+}
+
+/* Button Container */
+.todo-item .button-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+
+.todo-item button {
+  padding: 12px 20px;
+  background-color: #7baded;;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  padding-right: 50px;
+  color: #010000;
+  border: 2px solid #171717;
+  /* Adding a white border */
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Adding a soft shadow around the button */
+}
+.todo-item .button-container .delete-button{
+  
+  background-color:  #eb4242;
+}
+.todo-item .button-container .delete-button:hover{
+  background-color: #eb4242;
+  color: black;
+  transform: scale(1.05);
+  /* Slightly enlarges the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* A stronger shadow on hover for a glowing effect */}
+
+.todo-item button:hover {
+  background-color: #7baded;
+  color: black;
+  transform: scale(1.05);
+  /* Slightly enlarges the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* A stronger shadow on hover for a glowing effect */}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-list {
+    grid-template-columns: 1fr;
+    /* Switch to single column on small screens */
+  }
+}
