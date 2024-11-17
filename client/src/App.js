@@ -9,21 +9,21 @@ const App = () => {
 
     // Fetch all todos
     useEffect(() => {
-        axios.get('http://localhost:3000/todos')
+        axios.get('https://task9-fullstacktodo.onrender.com/todos')
             .then((res) => setTodos(res.data))
             .catch((err) => console.error(err));
     }, []);
 
     // Add a new todo
     const addTodo = (todo) => {
-        axios.post('http://localhost:3000/todos', todo)
+        axios.post('https://task9-fullstacktodo.onrender.com/todos', todo)
             .then((res) => setTodos([...todos, res.data]))
             .catch((err) => console.error(err));
     };
 
     // Update a todo
     const updateTodo = (id, updatedTodo) => {
-        axios.put(`http://localhost:3000/todos/${id}`, updatedTodo)
+        axios.put(`https://task9-fullstacktodo.onrender.com/todos/${id}`, updatedTodo)
             .then((res) => {
                 const updatedTodos = todos.map((todo) =>
                     todo._id === id ? res.data : todo
@@ -35,7 +35,7 @@ const App = () => {
 
     // Delete a todo
     const deleteTodo = (id) => {
-        axios.delete(`http://localhost:3000/todos/${id}`)
+        axios.delete(`https://task9-fullstacktodo.onrender.com/todos/${id}`)
             .then(() => setTodos(todos.filter((todo) => todo._id !== id)))
             .catch((err) => console.error(err));
     };
